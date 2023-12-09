@@ -1,0 +1,73 @@
+/*
+  Quinton Pharr
+  October 3rd 2023
+  Donovan Kong, and Kathryn Koehler - Section AB
+
+  This is the resume-styles.css page for my resume page. It is mostly all about formatting
+  and margins to try and make it look as much like my current resume with a couple small changes.
+*/
+body, h3, h4, h5, span {
+  display: flex;
+}
+
+body {
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+}
+
+header nav ul li {
+  font-family: 'Lato', sans-serif;
+  display: inline-block;
+  font-size: 24px;
+}
+
+header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+h2 {
+  font-size: 20px;
+  border-bottom: 1px solid black;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+h4, h5 {
+  font-size: 16px;
+  margin: 0;
+}
+
+span {
+  font-size: 17px;
+  font-weight: normal;
+  margin-left: auto;
+}
+
+#sporcle, .span2 {
+  font-weight: normal;
+}
+
+.span2 {
+  margin-left: 5px;
+}
+
+li {
+  margin-bottom: 5px;
+}

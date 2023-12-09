@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<!--
+  Quinton Pharr
+  October 16, 2023
+  Donovan Kong, and Kathryn Koehler - Section AB
+
+  This is the Whack-A-Mole section of my webpage. It contains a whack-a-mole game that
+  the user can play. The user can click on the moles to whack them and gain points.
+  The user can also click on the start button to start the game. The game lasts for
+  30 seconds.
+-->
+
+<html>
+  <head>
+    <title>Whack-a-Mole</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="whack-a-mole-styles.css">
+    <script src="game.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"
+    rel="stylesheet">
+  </head>
+
+    <body>
+      <header>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="top_ten_songs.html">Top Ten Songs</a></li>
+            <li><a href="whack-a-mole.html">Whack A Mole</a></li>
+            </ul>
+          </nav>
+          <h1>Whack-A-Mole</h1>
+          </header>
+
+        <section id="score-container">
+        <button id="score-button">Start</button>
+        <h2>Score: <span id="score">0</span></h2>
+        </section>
+
+        <section id="timer-container">
+          <h2>Timer: <span id="timer">30</span></h2>
+        </section>
+
+        <section id="mole-container">
+          <img class="whacked mole" src="img/hole.png" alt="A mole">
+          <img class="whacked mole" src="img/hole.png" alt="A mole">
+          <img class="whacked mole" src="img/hole.png" alt="A mole">
+          <img class="whacked mole" src="img/hole.png" alt="A mole">
+          <img class="whacked mole" src="img/hole.png" alt="A mole">
+          <img class="whacked mole" src="img/hole.png" alt="A mole">
+          <img class="whacked mole" src="img/hole.png" alt="A mole">
+          <img class="whacked mole" src="img/hole.png" alt="A mole">
+          <img class="whacked mole" src="img/hole.png" alt="A mole">
+          </section>
+        </body>
+      </html>

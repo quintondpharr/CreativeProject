@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--
+  Quinton Pharr
+  November 1st, 2023
+  Donovan Kong, and Kathryn Koehler - Section AB
+
+  This is the about page for my website. It contains information about me, classes I'm taking,
+  and some of my favorite things. It also contains two pictures that represent when I'm happy
+  and sad, and a quote that I like. Now for CP2 I included some more interactivity
+  and a resume page, along with a whack-a-mole game. For CP3 I added in two APIs
+  that allow the user to get a random activity to do when they're bored, and a random
+  image of an amiibo when they type in the name of one. For CP4 I added in a register and login
+  page that allows the user to register and login to the website. This means I also made the main
+  hidden at first as well as the login page until you register.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <title>About Me</title>
+  </head>
+  <body>
+
+    <section id="register" class="auth-section">
+      <h2>Register</h2>
+      <form>
+        <section class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required>
+        </section>
+
+        <section class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </section>
+
+        <section class="form-group">
+          <label for="re-enter-password">Re-enter Password</label>
+          <input type="password" name="re-enter-password" id="re-enter-password" required>
+        </section>
+        <button id="register-button">Register</button>
+        <p id='reg-response'></p>
+      </form>
+
+    </section>
+    <section id="login" class="auth-section hidden">
+      <h2>Login</h2>
+      <form>
+        <section class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="login-username" name="username" required>
+        </section>
+
+        <section class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="login-password" name="password" required>
+        </section>
+        <button id="login-button">Login</button>
+        <p id='log-response'></p>
+      </form>
+
+    </section>
+
+    <section id="main-page" class="hidden">
+
+      <header>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="top_ten_songs.html">Top Ten Songs</a></li>
+            <li><a href="whack-a-mole.html">Whack A Mole</a></li>
+          </ul>
+        </nav>
+        <h1>About me!</h1>
+      </header>
+
+      <section>
+        <p>
+          Hi, my name is Quinton and I am a second year student at the University of<br>
+          Washington. I am taking this class because I want to learn more about web <br>
+          development and I am also applying to the Informatics major this quarter!
+        </p>
+      </section>
+
+      <section class="controls">
+        <label for="name">What's your name?</label>
+        <input type="text" id="name" name="name">
+        <button id="submit">submit</button>
+      </section>
+
+      <hr>
+
+      <section>
+        <h2>Classes I'm currently taking</h2>
+        <ul>
+          <li><code>CSE 154!</code></li>
+          <li><code>CSE 414!</code></li>
+          <li><code>CSE 415!</code></li>
+        </ul>
+      </section>
+
+      <hr>
+
+      <section>
+        <aside>
+          <img src="img/husky.jpeg" alt="Cute husky picture">
+          <p>
+            <a href="https://www.britannica.com/animal/Siberian-husky">
+              Source
+            </a>
+          </p>
+        </aside>
+
+        <h2>Five of My Favorite Things</h2>
+        <ol>
+          <li><strong>Favorite animal:</strong> Husky: <a href="https://en.wikipedia.org/wiki/Husky">
+            Learn More!</a> </li>
+          <li><strong>Favorite food:</strong> Pasta</li>
+          <li><strong>Favorite movie:</strong> Top 5 (could watch at any time):
+            <ol>
+              <li>Interstellar</li>
+              <li>Everything Everywhere All at Once</li>
+              <li>Spiderman: Across/Into the Spiderverse</li>
+              <li>The Hundred-Foot Journey</li>
+              <li>Up</li>
+            </ol>
+          </li>
+          <li><strong>Favorite hobby:</strong> Losing in valorant</li>
+          <li><strong>Favorite (current)Song:</strong> Still Got Time - dexter in the newsagent</li>
+        </ol>
+      </section>
+
+      <hr>
+
+      <section>
+        <h3>A picture that represents when I'm happy</h3>
+        <img id="happy" src="img/tumblr_eab8a5350c41eb7393380d690c5a89fc_23f5e850_540.webp"
+        alt="Gojo and Geto being happy riding a bike">
+        <p>
+          <a href="https://nevermeyers.tumblr.com/post/722044873374646272">
+            Source
+          </a>
+        </p>
+      </section>
+
+      <hr>
+
+      <section>
+        <h3>A picture that represents when I'm sad</h3>
+        <img id="sad" src="img/sad.jpeg" alt="Gojo and Geto being sad in front of kfc">
+        <p>
+          <a href="https://www.sportskeeda.com/anime/gojo-geto-s-bittersweet-goodbye-jujutsu-kaisen-season-2-gets-reaction-kfc">
+            Source
+          </a>
+        </p>
+      </section>
+
+      <hr>
+
+      <section>
+        <h3>One of my favorite quotes</h3>
+        <article>
+          <blockquote>
+            <p>
+              "The only way to do great work is to love what you do."
+            </p>
+            <footer>
+              - Steve Jobs
+            </footer>
+          </blockquote>
+        </article>
+      </section>
+
+      <section id="ajax-container">
+        <section id="bored">
+          <h3>Bored? Looking for something to do!</h3>
+          <button id="bored-button">Click me!</button>
+          <p id="activity">Try me^!</p>
+        </section>
+
+        <section id="amiibo">
+          <h3>
+            Want to get a random image of an amiibo?
+            <br> Type in the name of one below!<br> (try mario!)
+          </h3>
+          <input type="text" id="amiibo-name" name="amiibo-name">
+          <button id="amiibo-button">Click me!</button>
+        </section>
+      </section>
+    </section>
+  </body>
+</html>

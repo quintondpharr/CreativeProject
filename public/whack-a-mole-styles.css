@@ -1,0 +1,79 @@
+/*
+  Quinton Pharr
+  October 3rd 2023
+  Donovan Kong, and Kathryn Koehler - Section AB
+
+  This is the whack-a-mole-styles.css page for my whack-a-mole game.
+  It is mostly just for before the game starts, I also used a grid display instead of flex
+  to make the 3 by 3 game board a bit easier to make.
+*/
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+header {
+  text-align: center;
+}
+
+header nav ul li {
+  font-family: 'Lato', sans-serif;
+  display: inline-block;
+  font-size: 24px;
+}
+
+header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+#mole-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 660px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.mole, .whacked {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 10px;
+  cursor: url('mallet.png'), crosshair;
+}
+
+#score-container, #timer-container {
+  display: flex;
+  justify-content: center;
+}
+
+#score-button {
+  align-self: center;
+  margin-right: 10px;
+  padding: 0;
+  height: 50%;
+}
+
+#timer-container h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#score {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#timer {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
