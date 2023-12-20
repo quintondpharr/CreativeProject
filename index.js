@@ -22,7 +22,7 @@
  * module-global pattern
  */
 (function() {
-  const BORED_API_URL = "http://www.boredapi.com/api/activity/";
+  const BORED_API_URL = "https://www.boredapi.com/api/activity/";
   const AMIIBO_API_URL = "https://www.amiiboapi.com/api/amiibo/?name=";
 
   window.addEventListener('load', init);
@@ -227,7 +227,7 @@
    */
   function handleError(error) {
     let message = document.createElement('p');
-    message.textContent = error + "Sorry something went wrong! Please try again later.";
+    message.textContent = error.message + " Sorry something went wrong! Please try again later.";
     id('activity').appendChild(message);
   }
 
